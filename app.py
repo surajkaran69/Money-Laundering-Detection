@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import pickle
-loaded_model = pickle.load(open(r"C:\Users\suraj\OneDrive\Desktop\anti money laundering system\model.pkl","rb"))
+loaded_model = pickle.load(open(r'model.pkl',"rb"))
 #creating afunction for prediction
 def worker_prediction(input_data):
     
