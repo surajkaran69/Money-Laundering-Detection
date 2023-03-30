@@ -11,9 +11,9 @@ def worker_prediction(input_data):
     output=loaded_model.predict(inputdata_reshaped)
     print(output)
     if(output[0]==0):
-        return 'This transaction is legit'
+        return 'This transaction is fraud'
     else:
-        return 'The transaction is fraud'
+        return 'The transaction is legit'
     
 def main():
     st.title("Money Laundering Detection")
