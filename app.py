@@ -4,7 +4,7 @@ import streamlit as st
 import pickle
 from sklearn.preprocessing import RobustScaler
 scaler = RobustScaler()
-loaded_model = pickle.load(open(r"C:\Users\suraj\OneDrive\Desktop\anti money laundering system\model.pkl","rb"))
+loaded_model = pickle.load(open("model.pkl","rb"))
 #creating afunction for prediction
 def worker_prediction(input_data):
     
