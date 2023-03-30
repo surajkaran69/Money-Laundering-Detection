@@ -2,14 +2,14 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 import pickle
-from sklearn.preprocessing import RobustScaler
-scaler = RobustScaler()
+
+
 loaded_model = pickle.load(open("model.pkl","rb"))
 #creating afunction for prediction
 def worker_prediction(input_data):
     
-    input_data_as_numpy_array=scaler.fit_transform(input_data)
-    input_data_as_numpy_array= np.asarray(input_data_as_numpy_array)
+    input_data_as_numpy_array=np.asarray(input_data)
+    
     inputdata_reshaped=input_data_as_numpy_array.reshape(1,-1)
     output=loaded_model.predict(inputdata_reshaped)
     print(output)
