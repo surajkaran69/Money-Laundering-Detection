@@ -9,7 +9,7 @@ loaded_model = pickle.load(open("model.pkl","rb"))
 def worker_prediction(input_data):
     
     input_data_as_numpy_array=scaler.fit_transform(input_data)
-    inputdata_reshaped=input_data_as_numpy_array
+    inputdata_reshaped=input_data_as_numpy_array.reshape(-1,1)
     output=loaded_model.predict(inputdata_reshaped)
     print(output)
     if(output[0]==0):
